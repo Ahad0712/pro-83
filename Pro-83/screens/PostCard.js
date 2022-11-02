@@ -42,11 +42,11 @@ export default class PostCard extends Component {
     } else {
       return (
         <View style={styles.container}>
-            <Image source={require('../assets/story_image_1.png')} style={styles.storyImage}></Image>
+            <Image source={require('../assets/image_1.png')} style={styles.postImage}></Image>
             <View style={styles.titleContainer}>
-              <Text style={styles.storyTitleText}>{this.props.story.title}</Text>
-              <Text style={styles.storyAuthor}>{this.props.story.author}</Text>
-              <Text style={styles.storyDescription}>{this.props.story.description}</Text>
+              <Text style={styles.postTitleText}>{this.props.post.title}</Text>
+              <Text style={styles.postAuthor}>{this.props.post.author}</Text>
+              <Text style={styles.postDescription}>{this.props.post.description}</Text>
             </View>
             <View style={styles.actionContainter}>
               <Ionicons name={'heart'} size={RFValue(30)} color={'white'}></Ionicons>
@@ -64,23 +64,23 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  storyImage:{
+  postImage:{
     resizeMode: 'contain',
     width:"95%",
     alignSelf:'center',
     height:RFValue(250)
   },
-  storyTitleText:{
+  postTitleText:{
     fontSize:RFValue(25),
     fontFamily:'Bubblegum-Sans',
     color:'white',
   },
-  storyAuthor:{
+  postAuthor:{
     fontSize:RFValue(18),
     fontFamily:'Bubblegum-Sans',
     color:'white'
   },
-  storyDescription:{
+  postDescription:{
     fontFamity:'Bubblemgum-Sans',
     fontSize:13,
     color:'white',
